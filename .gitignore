@@ -276,3 +276,13 @@ dist
 # Sonarlint plugin
 
 # End of https://www.toptal.com/developers/gitignore/api/node,webstorm+all,jetbrains+all
+
+# Node
+node_modules
+dist
+
+## OS X
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
