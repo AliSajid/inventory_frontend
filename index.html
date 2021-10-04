@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Food Bank Inventory Manager</title>
+    <meta name="description" content="A small web application to manage a food bank's inventory.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/app.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container"><a class="navbar-brand" href="#">Food Bank Inventory</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Inventory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Update Items</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Item Trends</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="alert" id="alert">
+
+    </div>
+    <div class="container" id="inventory">
+        <div class="row" style="padding-top: 50px;">
+            <div class="col">
+                <div class="table-responsive text-center" id="inventory_table">
+                    <table class="table">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Item</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inventory_table_body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="update" style="padding-top: 50px;">
+            <div class="col-3 text-center align-self-center"><button class="btn btn-primary btn-lg float-start" id="update_item" type="button">Update Quantity</button></div>
+            <div class="col-3 offset-6 text-center align-self-center"><button class="btn btn-primary btn-lg float-end" id="add_item" type="button" style="margin: 10px;">Add Item</button></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="trend" style="padding-top: 50px;"></div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
