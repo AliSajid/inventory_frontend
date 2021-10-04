@@ -5,7 +5,7 @@ import pkg from './package.json';
 
 // Configs
 var configs = {
-	name: 'Inventory-Frontend',
+	name: 'Inventory_Frontend',
 	files: ['app.js'],
 	formats: ['iife', 'es', 'amd', 'cjs'],
 	default: 'iife',

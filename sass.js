@@ -6,7 +6,7 @@ var pkg = require('./package.json');
 // Configs
 var configs = {
 	name: 'BuildToolsCookbook',
-	files: [],
+	files: ["styles.scss", "Navigation-Clean.scss", "bootstrap.min.scss"],
 	pathIn: 'src/scss',
 	pathOut: 'dist/css',
 	indentType: 'tab',
