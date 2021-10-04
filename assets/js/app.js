@@ -17,7 +17,6 @@ const addInventoryRow = function (table_id) {
 }
 
 const addInventoryEditor = function (item, table_id) {
-  console.log(item);
   const table = document.getElementById(table_id);
   let newRow = table.insertRow(-1);
   let nameCell = newRow.insertCell(0);
@@ -64,11 +63,11 @@ const update_item = function (obj) {
     if (this.status === 200) {
       console.log("Successfully uploaded all items.");
       console.log(this.response);
-      showAlertSuccess("Successfully uploaded all items.", 5000);
+      showAlertSuccess("Successfully uploaded all items.", 3000);
     } else {
       console.log("Failed to upload all items");
       console.log(this.response);
-      showAlertFailure("Failed to upload all items.", 5000);
+      showAlertFailure("Failed to upload all items.", 3000);
     }
   }
 
@@ -78,7 +77,6 @@ const update_item = function (obj) {
 
 const extractName = function (node) {
   let nodeName = node.firstChild.nodeName;
-  console.log(nodeName);
   if (nodeName === "INPUT") {
     return node.firstChild.value;
   } else  {
@@ -88,9 +86,7 @@ const extractName = function (node) {
 
 const update_all_items = function (table_id) {
   let data_table = document.getElementById("inventory_table_body");
-  console.log(data_table.rows.length);
   for (let i = 0; i < data_table.rows.length; i++) {
-    console.log(data_table.rows[i]);
     let name = extractName(data_table.rows[i].childNodes[0]);
     let quantity = data_table.rows[i].childNodes[1].firstChild.value;
     let item = {
@@ -108,7 +104,7 @@ const showAlertSuccess = function (message, timer) {
   alert_div.innerHTML = message;
   setTimeout(function () {
     alert_div.className = "alert alert-success alert-dismissible fade close";
-    alert_div.firstChild.remove();
+    location.reload();
   }, timer)
 }
 
@@ -118,7 +114,7 @@ const showAlertFailure = function (message, timer) {
   alert_div.innerHTML = message;
   setTimeout(function () {
     alert_div.className = "alert alert-success alert-dismissible fade close";
-    alert_div.firstChild.remove();
+    location.reload();
   }, timer)
 }
 
@@ -130,7 +126,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   update_items.onclick = function (event) {
     update_all_items("inventory_table_body");
-    // location.reload();
   }
 
   const add_item = document.getElementById("add_item");
