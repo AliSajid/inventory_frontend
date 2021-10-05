@@ -3,6 +3,8 @@ import {INVMODULE} from "./app";
 (function () {
   document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
+    INVMODULE.setApiId(":apiid");
+    INVMODULE.setApiKey(":apikey");
     INVMODULE.getInventory();
 
     const update_items = document.getElementById("update_item");
