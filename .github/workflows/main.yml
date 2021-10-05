@@ -6,7 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: gh-pages
     steps:
       - uses: actions/checkout@v2
         with:
@@ -27,4 +26,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
       - name: Inject secrets
+        env:
+          API_ID: ${{ secrets.API_ID }}
+          API_KEY: ${{ secrets.API_KEY }}
         run: echo $API_ID && echo $API_KEY #&& cd dist/js && pwd && ls -alh && sed -i -e "s/apiid/${API_ID}/g" main.min.js && sed -i -e "s/apikey/${API_KEY}/g" main.min.js
