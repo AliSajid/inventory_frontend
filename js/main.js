@@ -4,16 +4,8 @@
 
   let INVMODULE = {};
 
-  INVMODULE.API_URL_TEMPLATE = "https://:api_id.execute-api.us-east-1.amazonaws.com/api/:action";
+  INVMODULE.API_URL_TEMPLATE = "https://xeuq3n6x45.execute-api.us-east-1.amazonaws.com/api/:action";
   INVMODULE.API_KEY = "45RyYMv4l18bnit8Nidt8N34budgAg249keKuLc6";
-
-  INVMODULE.setApiId = function (apiid) {
-    INVMODULE.API_URL = INVMODULE.API_URL_TEMPLATE.replace(":api_id", apiid);
-  };
-
-  INVMODULE.setApiKey = function (apikey) {
-    INVMODULE.API_KEY = apikey;
-  };
 
   INVMODULE.showAlertSuccess = function (message, timer) {
     const alert_div = document.getElementById("alert");
@@ -138,10 +130,6 @@
   (function () {
     document.addEventListener('DOMContentLoaded', (event) => {
       console.log('DOM fully loaded and parsed');
-
-      INVMODULE.setApiId("$apiid");
-
-      INVMODULE.setApiKey("$apikey");
 
       INVMODULE.getInventory();
 
