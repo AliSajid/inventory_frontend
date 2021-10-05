@@ -26,4 +26,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
       - name: Inject secrets
-        run: cd dist/js && pwd && ls -alh && sed -i -e "s/:apiid/${{ secrets.API_ID }}/g" main.js && sed -i -e "s/:apikey/${{ secrets.API_KEY }}/g" main.js
+        env:
+          API_ID: ${{ secrets.API_ID }}
+          API_KEY: ${{ secrets.API_KEY }}
+        run: cd dist/js && pwd && ls -alh && sed -i -e "s/apiid/#{API_ID}/g" main.min.js && sed -i -e "s/apikey/#{API_KEY}/g" main.min.js

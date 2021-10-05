@@ -4,9 +4,9 @@ import {INVMODULE} from "./app";
   document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 
-    INVMODULE.setApiId(":apiid");
+    INVMODULE.setApiId("apiid");
 
-    INVMODULE.setApiKey(":apikey");
+    INVMODULE.setApiKey("apikey");
 
     INVMODULE.getInventory();
 
