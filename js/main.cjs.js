@@ -138,9 +138,9 @@ INVMODULE.update_all_items = function (table_id) {
   document.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 
-    INVMODULE.setApiId("apiid");
+    INVMODULE.setApiId("$apiid");
 
-    INVMODULE.setApiKey("apikey");
+    INVMODULE.setApiKey("$apikey");
 
     INVMODULE.getInventory();
 
