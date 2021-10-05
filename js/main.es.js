@@ -1,8 +1,8 @@
 /*! Inventory_Frontend v0.1.0 | (c) 2021 Ali Sajid Imami | GPLv3 License | https://github.com/AliSajid/inventory_frontend */
 let INVMODULE = {};
 
-INVMODULE.API_URL_TEMPLATE = "https://xeuq3n6x45.execute-api.us-east-1.amazonaws.com/api/:action";
-INVMODULE.API_KEY = "45RyYMv4l18bnit8Nidt8N34budgAg249keKuLc6";
+INVMODULE.API_URL = "https://eg558achr2.execute-api.us-east-1.amazonaws.com/api/:action";
+INVMODULE.API_KEY = "GsE5OxhsA5bGhBbWc29X6mRhT6vqgWJ32P96jRK7";
 
 INVMODULE.showAlertSuccess = function (message, timer) {
   const alert_div = document.getElementById("alert");
