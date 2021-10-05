@@ -64,7 +64,7 @@ INVMODULE.addInventoryEditor = function (item, table_id) {
 
 INVMODULE.getInventory = function () {
   let request = new XMLHttpRequest();
-  const URL = INVMODULE.replace(':action', "inventory");
+  const URL = INVMODULE.API_URL.replace(':action', "inventory");
 
   request.open('GET', URL);
   request.setRequestHeader("X-API-KEY", INVMODULE.API_KEY);
@@ -122,3 +122,5 @@ INVMODULE.update_all_items = function (table_id) {
     INVMODULE.update_item(item);
   }
 }
+
+export { INVMODULE };

@@ -1,4 +1,4 @@
-import 'app.js';
+import {INVMODULE} from "./app";
 
 (function () {
   document.addEventListener('DOMContentLoaded', (event) => {
