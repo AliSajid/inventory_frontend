@@ -1,0 +1,21 @@
+/*! BuildToolsCookbook v0.1.0 | (c) 2021 Ali Sajid Imami | GPLv3 License | https://github.com/AliSajid/inventory_frontend */
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
